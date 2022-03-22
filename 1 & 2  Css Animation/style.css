@@ -136,6 +136,7 @@ body {
 .cloud:nth-child(2) {
   width: 300px;
   top: 0;
+  /* * animation => 1 animation-name // 2 animation-duration // 3 animation-timing-function // 4 animation-direction */
   animation: wind 80s linear infinite reverse;
 }
 /** // KEYFRAMES // */
