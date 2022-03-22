@@ -101,14 +101,7 @@ body {
   position: absolute;
   top: -50px;
   left: 0px;
-  animation-name: drive;
-  animation-duration: 3s;
-  animation-fill-mode: both;
-  /******************************** Repeating Animations *********************************/
-  animation-iteration-count: infinite;
-
-  /***************************** Animation Timing Functions ******************************/
-  animation-timing-function: cubic-bezier(0, 0.77, 1, 0.28);
+  
 }
 
 .luigi {
@@ -136,8 +129,8 @@ body {
 .cloud:nth-child(2) {
   width: 300px;
   top: 0;
-  /* * animation => 1 animation-name // 2 animation-duration // 3 animation-timing-function // 4 animation-direction */
-  animation: wind 80s linear infinite reverse;
+  /* * animation => 1 animation-name // 2 animation-duration // 3 animation-timing-function // 4 animation-delay // 5 animation-iteration-count // 6 animation-direction // 7 animation-fill-mode // 8 animation-play-state */
+  animation: wind 50s linear infinite reverse;
 }
 /** // KEYFRAMES // */
 
@@ -156,5 +149,19 @@ body {
   }
   to {
     left: 100%;
+  }
+}
+
+/******************************** Chaining Animations *********************************/
+
+@keyframes jump {
+  0% {
+    top: -40px;
+  }
+  50% {
+    top: -100px;
+  }
+  100% {
+    top: -40px;
   }
 }
