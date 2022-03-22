@@ -1,3 +1,4 @@
+/*************************************** Transforms ****************************************/
 /* body {
   background-color: lightblue;
   text-align: center;
@@ -28,14 +29,15 @@
 /* transform: rotateZ(-90deg) translateY(200px) scale(2); */
 /* } */
 
-/*************************************** Transforms ****************************************/
+/*************************************** Transisions ****************************************/
+
 /* .circle { */
 /* width: 100px;
-  padding: 50px 0;
-  line-height: 0;
-  margin: 60px auto;
-  background: pink;
-  color: white;
+    padding: 50px 0;
+    line-height: 0;
+    margin: 60px auto;
+    background: pink;
+    color: white;
   border-radius: 50px;
   cursor: pointer;
   /** first time => transision time // secound time => delay */
@@ -43,25 +45,26 @@
 /* } */
 
 /* .circle:hover {
-  background: salmon;
-  transform: rotate(360deg);
+    background: salmon;
+    transform: rotate(360deg);
 } */
 
-/*************************************** Transisions ****************************************/
+/*************************** Keyframes & Animation Fill Mode ****************************/
+
 /** // BASE STYLES // */
 
 html,
 body {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
 }
 
 .grass,
 .sky,
 .road {
-    position: relative;
+  position: relative;
 }
 
 .sky {
@@ -70,13 +73,13 @@ body {
 }
 
 .grass {
-    height: 30%;
+  height: 30%;
   background: seagreen;
 }
 
 .road {
-    height: 30%;
-    background: dimgrey;
+  height: 30%;
+  background: dimgrey;
   box-sizing: border-box;
   border-top: 10px solid grey;
   border-bottom: 10px solid grey;
@@ -84,9 +87,9 @@ body {
 }
 
 .lines {
-    box-sizing: border-box;
-    border: 5px dashed #fff;
-    height: 0px;
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
   width: 100%;
   position: absolute;
   top: 45%;
@@ -95,23 +98,36 @@ body {
 /** // ELEMENTS TO ANMATE // */
 
 .mario {
-    position: absolute;
-    top: -50px;
-    left: 0px;
+  position: absolute;
+  top: -50px;
+  left: 0px;
   animation-name: drive;
   animation-duration: 3s;
   animation-fill-mode: both;
-  animation-delay: 2s;
+  /******************************** Repeating Animations *********************************/
+  animation-iteration-count: infinite;
+}
+
+.luigi {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  animation-name: drive;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
 }
 
 /** // KEYFRAMES // */
 
 @keyframes drive {
-    from {transform: translateX(200px)}
-    to {transform: translateX(700px)}
+    from {
+        transform: translateX(-200px);
+    }
+    to {
+        transform: translateX(1500px);
+    }
 }
 
-
-
-/*************************************** Animation Fill Mode ****************************************/
-
+/******************************** Animation Timing Functions *********************************/
