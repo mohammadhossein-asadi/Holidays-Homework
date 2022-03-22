@@ -52,16 +52,16 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  margin: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
 }
 
 .grass,
 .sky,
 .road {
-  position: relative;
+    position: relative;
 }
 
 .sky {
@@ -70,13 +70,13 @@ body {
 }
 
 .grass {
-  height: 30%;
+    height: 30%;
   background: seagreen;
 }
 
 .road {
-  height: 30%;
-  background: dimgrey;
+    height: 30%;
+    background: dimgrey;
   box-sizing: border-box;
   border-top: 10px solid grey;
   border-bottom: 10px solid grey;
@@ -84,9 +84,9 @@ body {
 }
 
 .lines {
-  box-sizing: border-box;
-  border: 5px dashed #fff;
-  height: 0px;
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
   width: 100%;
   position: absolute;
   top: 45%;
@@ -95,16 +95,23 @@ body {
 /** // ELEMENTS TO ANMATE // */
 
 .mario {
-  position: absolute;
-  top: -50px;
-  left: 0px;
+    position: absolute;
+    top: -50px;
+    left: 0px;
   animation-name: drive;
   animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-delay: 2s;
 }
 
 /** // KEYFRAMES // */
 
 @keyframes drive {
-  from {transform: translateX(0)}
-  to {transform: translateX(700px)}
+    from {transform: translateX(200px)}
+    to {transform: translateX(700px)}
 }
+
+
+
+/*************************************** Animation Fill Mode ****************************************/
+
