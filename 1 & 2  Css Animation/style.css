@@ -37,4 +37,11 @@ img {
   color: white;
   border-radius: 50px;
   cursor: pointer;
+  /** first time => transision time // secound time => delay */
+  transition: background 1s, transform 0.3s 1s ease;
+}
+
+.circle:hover {
+  background: salmon;
+  transform: rotate(360deg);
 }
