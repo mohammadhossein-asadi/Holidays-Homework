@@ -101,7 +101,7 @@ body {
   position: absolute;
   top: -50px;
   left: 0px;
-  
+  animation: drive 3s both infinite linear, jump 0.3s 1.2s ease;
 }
 
 .luigi {
