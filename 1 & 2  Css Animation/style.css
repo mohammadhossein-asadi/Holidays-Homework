@@ -13,7 +13,7 @@ body {
 /** if use one param for two state */
 
 img {
-    /** transform translate() */
+  /** transform translate() */
   /* transform: translateX(-200px);
   transform: translateY(200px);
   transform: translate(-200px,200px); */
@@ -25,5 +25,5 @@ img {
   /* transform: rotateX(60deg);
   transform: rotateY(60deg);
   transform: rotateZ(90deg); */
-
+  transform: rotateZ(-90deg) translateY(200px) scale(2);
 }
