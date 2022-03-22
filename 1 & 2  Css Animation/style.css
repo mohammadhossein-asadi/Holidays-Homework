@@ -1,4 +1,4 @@
-body {
+/* body {
   background-color: lightblue;
   text-align: center;
 }
@@ -7,45 +7,87 @@ body {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
-}
+} */
 
 /** transform => if just use transform: translate(100px,100px) without X or Y first param X and secound param Y */
 /** if use one param for two state */
 
-img {
-  /** transform translate() */
-  /* transform: translateX(-200px);
+/* img { */
+/** transform translate() */
+/* transform: translateX(-200px);
   transform: translateY(200px);
   transform: translate(-200px,200px); */
-  /** transform scale() */
-  /* transform:scaleX(1.5);
+/** transform scale() */
+/* transform:scaleX(1.5);
   transform:scaley(1.5);
   transform:scaley(1.5,1.6); */
-  /** transform rotate() */
-  /* transform: rotateX(60deg);
+/** transform rotate() */
+/* transform: rotateX(60deg);
   transform: rotateY(60deg);
   transform: rotateZ(90deg); */
-  /* transform: rotateZ(-90deg) translateY(200px) scale(2); */
-}
+/* transform: rotateZ(-90deg) translateY(200px) scale(2); */
+/* } */
 
 /*************************************** Transforms ****************************************/
-.circle {
-    width: 100px;
-    padding: 50px 0;
-    line-height: 0;
-    margin: 60px auto;
-    background: pink;
-    color: white;
-    border-radius: 50px;
-    cursor: pointer;
-    /** first time => transision time // secound time => delay */
-  transition: background 1s, transform 0.3s 1s ease;
-}
+/* .circle { */
+/* width: 100px;
+  padding: 50px 0;
+  line-height: 0;
+  margin: 60px auto;
+  background: pink;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  /** first time => transision time // secound time => delay */
+/* transition: background 1s, transform 0.3s 1s ease; */
+/* } */
 
-.circle:hover {
+/* .circle:hover {
   background: salmon;
   transform: rotate(360deg);
-}
+} */
 
 /*************************************** Transisions ****************************************/
+/** // BASE STYLES // */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.grass,
+.sky,
+.road {
+  position: relative;
+}
+
+.sky {
+  height: 40%;
+  background: skyblue;
+}
+
+.grass {
+  height: 30%;
+  background: seagreen;
+}
+
+.road {
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines {
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
 
