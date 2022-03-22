@@ -106,6 +106,9 @@ body {
   animation-fill-mode: both;
   /******************************** Repeating Animations *********************************/
   animation-iteration-count: infinite;
+
+  /***************************** Animation Timing Functions ******************************/
+  animation-timing-function: cubic-bezier(0,0.77, 1, 0.28);
 }
 
 .luigi {
@@ -122,12 +125,10 @@ body {
 /** // KEYFRAMES // */
 
 @keyframes drive {
-    from {
-        transform: translateX(-200px);
-    }
-    to {
-        transform: translateX(1500px);
-    }
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(1500px);
+  }
 }
-
-/******************************** Animation Timing Functions *********************************/
