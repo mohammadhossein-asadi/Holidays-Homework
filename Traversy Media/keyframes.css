@@ -7,7 +7,7 @@ body {
   width: 200px;
   height: 200px;
   position: relative;
-  animation: myanimation 4s;
+  animation: myanimation 4s infinite 2s alternate linear;
 }
 
 @keyframes myanimation {
