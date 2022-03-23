@@ -1,0 +1,31 @@
+body {
+  background: #333;
+}
+
+.box {
+  background: white;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation: myanimation 4s;
+}
+
+@keyframes myanimation {
+  0% {
+    background: white;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background: red;
+  }
+  50% {
+    background: green;
+  }
+  75% {
+    background: blue;
+  }
+  100% {
+    background: white;
+  }
+}
