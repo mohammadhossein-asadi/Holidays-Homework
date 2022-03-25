@@ -59,7 +59,7 @@ section::before {
 }
 
 .percent {
-  position: absolute;
+  position: relative;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -96,6 +96,13 @@ section::before {
   transform: translateX(-50%);
   text-align: center;
   padding: 30px 20px 10px;
+  background: #f00;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   z-index: 12;
   color: #fff;
 }
