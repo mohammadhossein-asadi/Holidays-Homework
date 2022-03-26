@@ -16,6 +16,7 @@ ul {
   padding: 0;
   display: flex;
 }
+
 ul li {
   position: relative;
   list-style: none;
@@ -26,4 +27,9 @@ ul li {
   border-radius: 50%;
   transition: 0.5s;
   cursor: pointer;
+}
+
+ul li:hover {
+  background: #86ff3b;
+  box-shadow: 0 0 0 4px #333, 0 0 0 6px #86ff3b;
 }
