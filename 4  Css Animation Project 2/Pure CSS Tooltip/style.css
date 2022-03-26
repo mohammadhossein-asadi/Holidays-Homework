@@ -6,5 +6,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  background: #333;
   font-family: "Poppins", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+ul li {
+  position: relative;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: #777;
+  margin: 0 20px;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
 }
