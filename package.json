@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/mohammadhossein-asadi/Holidays-Homework/issues"
   },
-  "homepage": "https://github.com/mohammadhossein-asadi/Holidays-Homework#readme"
+  "homepage": "https://github.com/mohammadhossein-asadi/Holidays-Homework#readme",
+  "devDependencies": {
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.49.9"
+  }
 }
