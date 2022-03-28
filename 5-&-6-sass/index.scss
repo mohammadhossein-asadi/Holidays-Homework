@@ -36,8 +36,18 @@ $secoundary: #1ac888;
 $error: #d32752;
 $info: #f6c31c;
 
+// # spacing
+
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// # borders
+$base-border-tickness: 1px;
+$base-border-radius: 20px;
+
 h1 {
   color: $priamry;
+  margin-bottom: $base-margin;
 }
 
 a {
@@ -48,25 +58,26 @@ button {
   color: white;
   background-color: $priamry;
   border: 0;
+  border-radius: $base-border-radius;
+  padding: $base-padding;
 }
 
 .error {
   color: $error;
   border-color: $error;
   border-style: solid;
+  margin: $base-margin;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  border-width: $base-border-tickness;
 }
 
 .notification {
   color: $secoundary;
   border-color: $secoundary;
   border-style: solid;
+  margin: $base-margin;
+  padding: $base-padding;
+  border-radius: $base-border-radius;
+  border-width: $base-border-tickness;
 }
-
-// # spacing
-
-$base-padding: 0.75rem;
-$base-margin: 0.75rem;
-
-// # borders
-$base-border-tickness: 1px;
-$base-border-radius: 20px;
