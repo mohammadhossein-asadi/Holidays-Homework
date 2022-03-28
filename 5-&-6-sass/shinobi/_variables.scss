@@ -27,9 +27,14 @@ $colors: (
 
 @debug map-get($colors, "purple");
 @debug map-has-key($colors, "secondary");
-@debug map-has-key($colors, "tertiary");
+@debug map-has-key($colors, "teritiary");
 @debug map-remove($colors, "primary");
-@debug map-merge($colors, ("pink": #ffc0cb));
+@debug map-merge(
+  $colors,
+  (
+    "pink": #ffc0cb,
+  )
+);
 
 // spacing
 $base-padding: 0.75rem;
@@ -40,7 +45,7 @@ $base-border-thickness: 1px;
 $base-border-radius: 20px;
 
 // box-shadow
-$base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
 
 // font sizes
 $base-font-size: 1rem;
