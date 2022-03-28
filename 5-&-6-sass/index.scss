@@ -1,5 +1,5 @@
 // import google font
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* reset styles */
 * {
@@ -29,8 +29,44 @@ img {
   max-width: 100%;
 }
 
+// # color
+
+$priamry: #326dee;
+$secoundary: #1ac888;
+$error: #d32752;
+$info: #f6c31c;
+
 h1 {
-  a {
-    color: blue;
-  }
+  color: $priamry;
 }
+
+a {
+  color: $secoundary;
+}
+
+button {
+  color: white;
+  background-color: $priamry;
+  border: 0;
+}
+
+.error {
+  color: $error;
+  border-color: $error;
+  border-style: solid;
+}
+
+.notification {
+  color: $secoundary;
+  border-color: $secoundary;
+  border-style: solid;
+}
+
+// # spacing
+
+$base-padding: 0.75rem;
+$base-margin: 0.75rem;
+
+// # borders
+$base-border-tickness: 1px;
+$base-border-radius: 20px;
