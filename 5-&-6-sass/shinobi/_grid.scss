@@ -7,11 +7,9 @@ $grid-gaps: (
   "2": 20px,
   "3": 30px,
 );
-
 $layout-values: flex-start, flex-end, center, space-between, space-around;
 
-// # base layout classes
-
+// base layout classes
 .container {
   width: 100%;
   max-width: 1200px;
@@ -24,9 +22,8 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
   flex-flow: row wrap;
 }
 
-// # grid gaps
-
-@each $key, $var in $grid-gaps {
+// grid gaps
+@each $key, $val in $grid-gaps {
   .gap-#{$key} > * {
     padding: $val;
   }
@@ -36,13 +33,13 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
   }
 }
 
-// # justify content classes
-
+// justify content classes
 @each $val in $layout-values {
   .justify-#{$val} {
     justify-content: $val;
   }
 }
+
 // col classes
 @include xs {
   @for $i from 1 through $grid-columns {
@@ -53,7 +50,6 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
   }
 }
-
 @include sm {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-sm {
@@ -63,7 +59,6 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
   }
 }
-
 @include md {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-md {
@@ -73,7 +68,6 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
   }
 }
-
 @include lg {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-lg {
@@ -83,7 +77,6 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     }
   }
 }
-
 @include xl {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-xl {
