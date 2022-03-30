@@ -6,12 +6,38 @@ const empties = document.querySelectorAll(".empty");
 fill.addEventListener("dragstart", dragStart);
 fill.addEventListener("dragend", dragEnd);
 
+// * Loop through empties and call drag events
+
+for (const empty of empties) {
+  empty.addEventListener("dragover", dragOver);
+  empty.addEventListener("dragenter", dragEnter);
+  empty.addEventListener("dragleave", dragLeave);
+  empty.addEventListener("drop", dragDrop);
+}
+
 // * Drag Functions
 
 function dragStart() {
-  console.log("start");
+  this.className += " hold";
+  setTimeout(() => ((this.className = "invisible"), 0));
 }
 
 function dragEnd() {
-  console.log("end");
+  this.className = "fill";
+}
+
+function dragOver(e) {
+  e.preventDefult();
+}
+
+function dragEnter(e) {
+  e.preventDefult();
+}
+
+function dragLeave(e) {
+  e.preventDefult();
+}
+
+function dragDrop(e) {
+  e.preventDefult();
 }
