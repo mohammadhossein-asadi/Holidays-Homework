@@ -27,17 +27,19 @@ function dragEnd() {
 }
 
 function dragOver(e) {
-  e.preventDefult();
+  e.preventDefault();
 }
 
 function dragEnter(e) {
-  e.preventDefult();
+  e.preventDefault();
+  this.className += " hovered";
 }
 
-function dragLeave(e) {
-  e.preventDefult();
+function dragLeave() {
+  this.className = "empty";
 }
 
-function dragDrop(e) {
-  e.preventDefult();
+function dragDrop() {
+  this.className = "empty";
+  this.append(fill)
 }
