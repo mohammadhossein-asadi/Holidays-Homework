@@ -31,7 +31,7 @@ function createList() {
     .forEach((person, index) => {
       const listItem = document.createElement("li");
 
-      listItem.classList.add("wrong");
+
 
       listItem.setAttribute("data-index", index);
       listItem.innerHTML = `
