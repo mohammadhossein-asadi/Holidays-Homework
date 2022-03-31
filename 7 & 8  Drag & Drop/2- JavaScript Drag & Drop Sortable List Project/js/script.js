@@ -47,6 +47,39 @@ function createList() {
   addEventListeners();
 }
 
+function dragStart() {
+  // console.log("Event: ", "dragstart");
+  dragStartIndex = +this.closest("li").getAttribute("data-index");
+  console.log(dragStartIndex);
+}
+
+function dragEnter() {
+  this.classList.add("over");
+  // console.log("Event: ", "dragenter");
+}
+
+function dragLeave() {
+  // console.log("Event: ", "dragleave");
+  this.classList.remove("over");
+}
+
+function dragOver(e) {
+  // console.log("Event: ", "dragover");
+  e.preventDefault();
+}
+
+function dragDrop() {
+  // console.log("Event: ", "dragDrop");
+  const dragEndIndex = +this.getAttribute("data-index");
+  swapItems(dragStartIndex, dragEndIndex);
+
+  this.classList.remove("over");
+}
+
+function swapItems(fromIndex, toIndex) {
+  console.log(123);
+}
+
 function addEventListeners() {
   const draggables = document.querySelectorAll(".draggable");
   const dragListItems = document.querySelectorAll(".draggable-list li");
@@ -56,9 +89,9 @@ function addEventListeners() {
   });
 
   dragListItems.forEach((item) => {
-    item.addEventListener("", dragOver);
-    item.addEventListener("", dragDrop);
-    item.addEventListener("", dragEnter);
-    item.addEventListener("", dragLeave);
+    item.addEventListener("dragover", dragOver);
+    item.addEventListener("drop", dragDrop);
+    item.addEventListener("dragenter", dragEnter);
+    item.addEventListener("dragleave", dragLeave);
   });
 }
