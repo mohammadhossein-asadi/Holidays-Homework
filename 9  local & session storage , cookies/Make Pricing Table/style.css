@@ -7,4 +7,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #5c539d;
+}
+
 
