@@ -41,3 +41,26 @@ body {
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
 }
+
+.container .loader::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #00fff9;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #00fff9,
+    0 0 20px #00fff9,
+    0 0 30px #00fff9,
+    0 0 40px #00fff9,
+    0 0 50px #00fff9,
+    0 0 60px #00fff9,
+    0 0 70px #00fff9,
+    0 0 80px #00fff9, 
+    0 0 90px #00fff9,
+    0 0 100px #00fff9;
+}
