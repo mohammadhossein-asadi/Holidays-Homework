@@ -62,9 +62,30 @@
     margin: 15px 0;
 }
 
-.price-col ul li::before{
-    content: '\2022';
+.price-col ul li::before {
+    content: "\2022";
     color: #e33058;
     font-weight: bold;
     margin-right: 8px;
+}
+
+.price-col button {
+    width: 100%;
+    padding: 14px 0;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #e33058;
+    border-radius: 6px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+.price-col button:hover {
+    background: #e33058;
+}
+
+.price-col button:active {
+    transform: scale(0.98);
 }
