@@ -31,9 +31,15 @@ function validationPhone() {
     return false;
   }
   if (!phone.match(/^[0-9]{10}$/)) {
-    phoneError.innerText = `Only digits please`;
+    phoneError.innerHTML = `Only digits please`;
     return false;
   }
   phoneError.innerHTML = `<i class="fas fa-circle-check"></i>`;
   return true;
+}
+
+function validationEmail() {
+  const emailError = document.getElementById("contact-email");
+
+  
 }
