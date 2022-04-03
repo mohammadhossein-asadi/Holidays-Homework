@@ -8,11 +8,11 @@ function validationName() {
   const name = document.getElementById("contact-name").value;
 
   if (name.length == 0) {
-    nameError.innerText = `Name is required`;
+    nameError.innerHTML = `Name is required`;
     return false;
   }
   if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
-    nameError.innerText = `Write full name`;
+    nameError.innerHTML = `Write full name`;
     return false;
   }
   nameError.innerHTML = `<i class="fas fa-circle-check"></i>`;
@@ -23,11 +23,11 @@ function validationPhone() {
   const phone = document.getElementById("contact-phone").value;
 
   if (phone.length == 0) {
-    phoneError.innerText = `Phone is required`;
+    phoneError.innerHTML = `Phone is required`;
     return false;
   }
   if (phone.length !== 10) {
-    phoneError.innerText = `Phone no should be 10 digits`;
+    phoneError.innerHTML = `Phone no should be 10 digits`;
     return false;
   }
   if (!phone.match(/^[0-9]{10}$/)) {
@@ -42,11 +42,11 @@ function validationEmail() {
   const email = document.getElementById("contact-email").value;
 
   if (email.length == 0) {
-    emailError.innerText = `Email is required`;
+    emailError.innerHTML = `Email is required`;
     return false;
   }
   if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
-    emailError.innerText = `Email Invalid`;
+    emailError.innerHTML = `Email Invalid`;
     return false;
   }
   emailError.innerHTML = `<i class="fas fa-circle-check"></i>`;
@@ -76,7 +76,7 @@ function validationForm() {
     !validationMessage()
   ) {
     submitError.style.display = "block";
-    submitError.innerText = `Please fix error to submit`;
+    submitError.innerHTML = `Please fix error to submit`;
     setTimeout(function () {
       submitError.style.display = "none";
     }, 3000);
