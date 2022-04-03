@@ -60,9 +60,26 @@ function validationMessage() {
   const left = required - message.length;
 
   if (left > 0) {
-    messageError.innerText = `${left} more characters required`;
+    messageError.innerHTML = left + " more characters required";
     return false;
   }
+
   messageError.innerHTML = `<i class="fas fa-circle-check"></i>`;
   return true;
+}
+
+function validationForm() {
+  if (
+    !validationName ||
+    !validationPhone ||
+    !validationEmail() ||
+    !validationMessage()
+  ) {
+    submitError.style.display = "block";
+    submitError.innerText = `Please fix error to submit`;
+    setTimeout(function () {
+      submitError.style.display = "none";
+    }, 3000);
+    return false;
+  }
 }
