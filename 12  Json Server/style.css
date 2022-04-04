@@ -42,4 +42,6 @@ textarea {
     font-family: "Roboto";
 }
 
-
+textarea {
+    min-height: 200px;
+}
