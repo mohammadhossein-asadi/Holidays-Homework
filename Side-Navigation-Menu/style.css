@@ -101,6 +101,19 @@
     top: 85.6%;
 }
 
+.logo-icon {
+    display: none;
+    width: 45px;
+}
+
 @media only screen and (max-width: 600px) {
-    
+    .side-nav {
+        width: 100px;
+    }
+    .logo-icon {
+        display: block;
+    }
+    .logo-img{
+        display: none;
+    }
 }
